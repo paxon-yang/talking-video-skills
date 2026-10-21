@@ -1,10 +1,10 @@
 # 方法层：怎么拆一条新的参考视频并复刻
 
-这是 A/B/C/D 四条视频实际走过的流程，写成可照做的步骤。脚本都在本 Skill 的 `scripts/`（用途与依赖见 `scripts/README.md`），下文用 `$S` 代表 `~/.claude/skills/ae-motion-craft/scripts`。
+这是 A/B/C/D 四条视频实际走过的流程，写成可照做的步骤。脚本都在本 Skill 的 `scripts/`（用途与依赖见 `scripts/README.md`），下文用 `$S` 代表 `video-asset-prep/scripts`。
 工作目录约定：`<工程目录>/analysis/<研究名>/<视频代号>/`（原片 `src.mp4`、代理 `proxy.mp4`、拼图 `w/`、技法卡 `TECHNIQUES.md`）。原片只读。
 
 ```bash
-S=~/.claude/skills/ae-motion-craft/scripts
+S=video-asset-prep/scripts
 W=<工程目录>/analysis/<研究名>/<代号>; mkdir -p $W/w && cd $W
 ```
 

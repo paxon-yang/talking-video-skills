@@ -17,7 +17,7 @@
 不适合：要的只是某个缓动/间隔数值（用 `measure.py` + `fit_decay.py` 即可）；整段超过 20 秒（成本按镜头线性增长，A 17 s 整片 r0–r4 五次打分，另有 a1–a6、b1–b13、c1–c8 共 27 次单镜头小轮）。
 
 ## 2. 步骤与命令
-`$S` = `~/.claude/skills/ae-motion-craft/scripts`，`$P` = `<工程目录>`，`<name>` = 研究名（A / C / D …）。
+`$S` = `video-asset-prep/scripts`，`$P` = `<工程目录>`，`<name>` = 研究名（A / C / D …）。
 
 ### 2.1 抽全帧
 ```bash

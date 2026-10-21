@@ -1,5 +1,5 @@
 // 用法（在 <工程目录> 下执行）:
-//   node ~/.claude/skills/combo-style/scripts/stills_timeline.mjs <timelineSrc> <outDir> <frame,frame,...>
+//   node talking-video-oneshot/scripts/stills_timeline.mjs <timelineSrc> <outDir> <frame,frame,...>
 // 例: node …/stills_timeline.mjs projects/demo/timeline.json out/demo/stills 45,300,620
 // 只打包一次，对 Main 合成按给定 timeline 出多张 PNG：<outDir>/f<帧号>.png。不修改工程 src/ 与 scripts/。
 import path from 'node:path';

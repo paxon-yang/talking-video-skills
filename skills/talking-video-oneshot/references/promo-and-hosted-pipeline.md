@@ -81,7 +81,7 @@ python3 scripts/check_sub_sync.py --timeline public/projects/<slug>/<timeline>.j
 ## 5. 回归（改了共享文件之后）
 改 `src/types.ts`、`src/Player.tsx`、`src/SceneRenderer.tsx`、lint、`src/Root.tsx` 这类共享文件后，必须证明已交付的 示例项目 口播片没变：
 ```bash
-~/.claude/skills/ae-motion-craft/scripts/regress_md5.sh <工程目录> projects/bee-level8/full.timeline.json \
+video-asset-prep/scripts/regress_md5.sh <工程目录> projects/bee-level8/full.timeline.json \
     <工程目录>/out/regress4.md5 <工程目录>/out/regress_now
 ```
 - 8 帧（60,130,900,1500,2200,3000,3700,4400）md5 逐张比；基线 `out/regress4.md5` 对应 `full.timeline.json`（2026-10-19 实测 8/8 相同，约 3 分钟）。

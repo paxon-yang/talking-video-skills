@@ -68,7 +68,7 @@ S1 稿子（Notion 原稿→压缩口播→钩子改写→英文改编，按实�
 | scripts/README.md | 可复用脚本清单（SFX 合成/cue、混音检查、联系表、转场模式、出图）及 TS 组件如何带进新工程 |
 | scripts/stills_timeline.mjs | 对任意 timeline 一次打包出多张关键帧 PNG（第 3 轮用，已验证） |
 | examples/demo-script.md | 一次协作过程示例：第 0–4 轮每轮交什么、用户可能怎么反馈、怎么改 |
-| ~/.claude/skills/ae-motion-craft/SKILL.md | **高级动效**：口播片里加 fx 动效积木、做纯动效宣传片、拆新的参考动效视频（规律 / 积木目录 / 拆解方法） |
+| video-asset-prep/SKILL.md | **高级动效**：口播片里加 fx 动效积木、做纯动效宣传片、拆新的参考动效视频（规律 / 积木目录 / 拆解方法） |
 
 Remotion 工程：`<工程目录>/`（本机，不在云盘）。**`src/tokens.ts` 与组件是参数唯一事实来源**；与 references 冲突以工程代码为准。`src/` 不是只读：按需求需要就改（新增/扩展积木、改共享文件都可以，用户 2026-10-19 明确认可）；改完建议跑 ae-motion-craft 的回归检查确认没弄坏旧流程；不要 git commit，除非用户要求。
 
@@ -137,7 +137,7 @@ Remotion 的 `staticFile` 只能读 `public/`，而 `public/` 会被整个打包
 ```bash
 cd <工程目录>
 # 用法: node <脚本> <timelineSrc> <outDir> <帧号,帧号,…>；打包一次出多张，约 10 秒，输出 f<帧号5位>.png
-node ~/.claude/skills/combo-style/scripts/stills_timeline.mjs projects/<slug>/timeline.json out/<slug>/stills 45,300,620
+node talking-video-oneshot/scripts/stills_timeline.mjs projects/<slug>/timeline.json out/<slug>/stills 45,300,620
 # 单张也可：npx remotion still Main out/<slug>/x.png --props='{"timelineSrc":"projects/<slug>/timeline.json"}' --frame=300
 # 并排（左原片 右我们，均缩到 960×540）
 scripts/compare.sh projects/<slug>/review/r3_cmp_01.png <原片证据帧> out/<slug>/stills/f00045.png   # 左原片 右我们，均缩到 960×540

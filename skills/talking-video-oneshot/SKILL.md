@@ -7,6 +7,9 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 目标：用户只说需求，Claude 自己把稿子、字幕、动效、音效、渲染、自检、封面、文案做完，交一个成片。**不要每步都问**，不要让用户确认可以自己决定的事。
 
+## 先查备料（开工前 30 秒）
+对照 `../video-asset-prep/SKILL.md` 的备料清单：数字人（出镜版才需要）、声音、积木库、固定框架。**缺哪项就转去备哪项，不要硬做**；纯动效版不需要数字人。备料齐了，下面全部自动推进。
+
 ## 0. 收需求（最多问一次，三个问题打包问）
 只问会改变成片结构、且无法默认的事。用户没回答的一律走默认：
 
@@ -54,6 +57,7 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 7. 交付后不重复汇报过程，给：位置、改了什么、已知瑕疵、封面、一句话文案。
 
 ## 5. 相关
-- 口播协作与包装细节：`../combo-style/SKILL.md`
-- 动效规律、拆解与复刻方法、与口播融合：`../ae-motion-craft/SKILL.md`
-- 脚本：`../../pipeline-scripts/`；完整方法论：`../../方法论.md`
+- 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
+- 本 skill 的细节在 `references/`：稿子与钩子（hooks-and-copy、thinking、templates）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
+- 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`

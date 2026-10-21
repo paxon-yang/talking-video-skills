@@ -102,7 +102,7 @@
 
 ### 6.3 网格背景（一次做好，反复用）
 - 底色 **#010101**，网格线 **#1A1A1A**、线宽 2px、间距 **72px**（均校准值）。
-- 做成 1920×1080 PNG 放在主轨即可。Remotion 工程里可一键导出：`cd <工程目录> && npx remotion still T-GridBackground out/grid_bg.png --frame=0`；或直接用本 Skill 附带的 `~/.claude/skills/combo-style/templates/grid_bg_1920x1080.png`（已用该命令导出）。
+- 做成 1920×1080 PNG 放在主轨即可。Remotion 工程里可一键导出：`cd <工程目录> && npx remotion still T-GridBackground out/grid_bg.png --frame=0`；或直接用本 Skill 附带的 `talking-video-oneshot/templates/grid_bg_1920x1080.png`（已用该命令导出）。
 - 幽灵大字：同色系 #151515–#1A1A1A，字高 ≈0.6–0.9H，居中。
 
 ## 7. 转场
