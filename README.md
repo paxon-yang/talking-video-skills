@@ -2,10 +2,9 @@
 
 一句话需求 → 口播 / 动效讲解视频成片。两个 Claude Code Skill（备料 + 制作） + 方法论 + 可复用脚本。
 
-<p align="center"><img src="assets/contact_sheet.png" width="820" alt="成片分镜总览"></p>
 <p align="center"><img src="assets/cover_h.png" width="520" alt="横版封面"> <img src="assets/cover_v.png" height="292" alt="竖版封面"></p>
 
-上图为用本 Skill 做出的一条 60 秒纯动效视频（分镜总览与自动生成的封面）。
+上图为用本 Skill 做出的一条 60 秒纯动效视频的自动生成封面。
 
 
 ## 结构：备料 + 制作
