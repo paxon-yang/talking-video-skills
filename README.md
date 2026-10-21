@@ -2,11 +2,10 @@
 
 一句话需求 → 口播 / 动效讲解视频成片。两个 Claude Code Skill（备料 + 制作） + 方法论 + 可复用脚本。
 
-<p align="center"><img src="assets/cover_host.png" width="820" alt="数字人出镜 + 身后大字封面"></p>
-<p align="center"><img src="assets/cover_h.png" width="520" alt="横版封面"> <img src="assets/cover_v.png" height="292" alt="竖版封面"></p>
+<p align="center"><img src="assets/frame_claude.png" width="800" alt="成片画面：数字人 + 身后大标题"></p>
+<p align="center"><img src="assets/frame_four_steps.png" width="800" alt="成片画面：身后大字「四步」"></p>
 
-上图为用本 Skill 做出的两条视频的自动生成封面：数字人出镜版（身后大字）和 60 秒纯动效版。
-
+上图为用本 Skill 做出的视频中的两帧：数字人出镜，大标题叠在人物身后。
 
 ## 结构：备料 + 制作
 | 路径 | 内容 |
