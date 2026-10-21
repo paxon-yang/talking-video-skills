@@ -1,0 +1,1321 @@
+{
+ "version": "1",
+ "meta": {
+  "title": "示例：新手怎么用 AI 整理会议纪要（90 秒，模板 A 教程型，N=2；素材与数字均为示例数据）",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "durationInFrames": 2700,
+  "template": "A_tool_review",
+  "theme": "qiuzhi_dark"
+ },
+ "assets": {
+  "hostVideo": "placeholder/host_full_2m.mp4",
+  "hostPipVideo": "placeholder/host_pip_2m_480.mp4",
+  "hostAudio": "placeholder/host_2m.wav",
+  "files": {
+   "logo": "placeholder/logo.png",
+   "screen_prompt": "placeholder/screen_upload.mp4",
+   "screen_ask": "placeholder/screen_transcribe.mp4",
+   "screen_script": "placeholder/screen_summary.mp4",
+   "screen_render": "placeholder/screen_share.mp4",
+   "clip_before": "placeholder/clip_orig.mp4",
+   "clip_after": "placeholder/clip_ai.mp4",
+   "broll_desk": "placeholder/broll_2.jpg",
+   "broll_city": "placeholder/broll_4.jpg",
+   "thumb_1": "placeholder/broll_1.jpg",
+   "thumb_2": "placeholder/broll_3.jpg"
+  }
+ },
+ "sentences": [
+  {
+   "id": "s01",
+   "start": 0,
+   "end": 80,
+   "words": [
+    {
+     "text": "四十分钟",
+     "start": 55,
+     "end": 79,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s02",
+   "start": 86,
+   "end": 159,
+   "words": [
+    {
+     "text": "五分钟",
+     "start": 123,
+     "end": 141,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "start": 165,
+   "end": 251,
+   "words": []
+  },
+  {
+   "id": "s04",
+   "start": 257,
+   "end": 293,
+   "words": []
+  },
+  {
+   "id": "s05",
+   "start": 299,
+   "end": 385,
+   "words": [
+    {
+     "text": "两步",
+     "start": 342,
+     "end": 354,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "start": 391,
+   "end": 464,
+   "words": []
+  },
+  {
+   "id": "s07",
+   "start": 470,
+   "end": 544,
+   "words": []
+  },
+  {
+   "id": "s08",
+   "start": 550,
+   "end": 648,
+   "words": []
+  },
+  {
+   "id": "s09",
+   "start": 654,
+   "end": 733,
+   "words": [
+    {
+     "text": "以前",
+     "start": 654,
+     "end": 666,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 739,
+   "end": 825,
+   "words": [
+    {
+     "text": "现在",
+     "start": 739,
+     "end": 751,
+     "confidence": 1
+    },
+    {
+     "text": "转成文字",
+     "start": 757,
+     "end": 781,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 831,
+   "end": 910,
+   "words": [
+    {
+     "text": "转文字",
+     "start": 874,
+     "end": 892,
+     "confidence": 1
+    },
+    {
+     "text": "再整理",
+     "start": 892,
+     "end": 910,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 916,
+   "end": 959,
+   "words": []
+  },
+  {
+   "id": "s13",
+   "start": 965,
+   "end": 1020,
+   "words": []
+  },
+  {
+   "id": "s14",
+   "start": 1026,
+   "end": 1106,
+   "words": []
+  },
+  {
+   "id": "s15",
+   "start": 1112,
+   "end": 1179,
+   "words": [
+    {
+     "text": "录音",
+     "start": 1118,
+     "end": 1130,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 1185,
+   "end": 1253,
+   "words": []
+  },
+  {
+   "id": "s17",
+   "start": 1259,
+   "end": 1344,
+   "words": []
+  },
+  {
+   "id": "s18",
+   "start": 1350,
+   "end": 1430,
+   "words": [
+    {
+     "text": "发言人",
+     "start": 1411,
+     "end": 1429,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 1436,
+   "end": 1491,
+   "words": [
+    {
+     "text": "一分钟",
+     "start": 1473,
+     "end": 1491,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 1497,
+   "end": 1576,
+   "words": []
+  },
+  {
+   "id": "s21",
+   "start": 1582,
+   "end": 1631,
+   "words": []
+  },
+  {
+   "id": "s22",
+   "start": 1637,
+   "end": 1711,
+   "words": []
+  },
+  {
+   "id": "s23",
+   "start": 1717,
+   "end": 1802,
+   "words": [
+    {
+     "text": "输入要求",
+     "start": 1717,
+     "end": 1741,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 1808,
+   "end": 1906,
+   "words": [
+    {
+     "text": "左边",
+     "start": 1808,
+     "end": 1820,
+     "confidence": 1
+    },
+    {
+     "text": "右边",
+     "start": 1851,
+     "end": 1863,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 1912,
+   "end": 2010,
+   "words": []
+  },
+  {
+   "id": "s26",
+   "start": 2016,
+   "end": 2102,
+   "words": []
+  },
+  {
+   "id": "s27",
+   "start": 2108,
+   "end": 2267,
+   "words": [
+    {
+     "text": "四十分钟",
+     "start": 2212,
+     "end": 2236,
+     "confidence": 1
+    },
+    {
+     "text": "五分钟",
+     "start": 2249,
+     "end": 2267,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 2273,
+   "end": 2334,
+   "words": []
+  },
+  {
+   "id": "s29",
+   "start": 2340,
+   "end": 2413,
+   "words": []
+  },
+  {
+   "id": "s30",
+   "start": 2419,
+   "end": 2499,
+   "words": [
+    {
+     "text": "转文字",
+     "start": 2462,
+     "end": 2480,
+     "confidence": 1
+    },
+    {
+     "text": "再整理",
+     "start": 2480,
+     "end": 2498,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 2505,
+   "end": 2536,
+   "words": []
+  },
+  {
+   "id": "s32",
+   "start": 2542,
+   "end": 2597,
+   "words": [
+    {
+     "text": "哪种会议",
+     "start": 2573,
+     "end": 2597,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 2603,
+   "end": 2670,
+   "words": []
+  }
+ ],
+ "subtitles": [
+  {
+   "id": "s01_0",
+   "from": 0,
+   "to": 79,
+   "text": "开会十分钟 整理纪要四十分钟？",
+   "sentenceId": "s01"
+  },
+  {
+   "id": "s02_0",
+   "from": 86,
+   "to": 158,
+   "text": "其实交给AI 五分钟就够了",
+   "sentenceId": "s02"
+  },
+  {
+   "id": "s03_0",
+   "from": 165,
+   "to": 250,
+   "text": "以前开完会 要回听录音 逐条打字",
+   "sentenceId": "s03"
+  },
+  {
+   "id": "s04_0",
+   "from": 257,
+   "to": 292,
+   "text": "还得熬一下午",
+   "sentenceId": "s04"
+  },
+  {
+   "id": "s05_0",
+   "from": 299,
+   "to": 384,
+   "text": "今天教你用AI 两步搞定这件事",
+   "sentenceId": "s05"
+  },
+  {
+   "id": "s06_0",
+   "from": 391,
+   "to": 463,
+   "text": "不用学复杂软件 会打字就行",
+   "sentenceId": "s06"
+  },
+  {
+   "id": "s07_0",
+   "from": 470,
+   "to": 543,
+   "text": "Claude是个AI助手",
+   "sentenceId": "s07"
+  },
+  {
+   "id": "s08_0",
+   "from": 550,
+   "to": 604,
+   "text": "会议录音转出的文字",
+   "sentenceId": "s08"
+  },
+  {
+   "id": "s08_1",
+   "from": 605,
+   "to": 647,
+   "text": "它也能直接整理",
+   "sentenceId": "s08"
+  },
+  {
+   "id": "s09_0",
+   "from": 654,
+   "to": 732,
+   "text": "以前要回听 打字 反复核对待办",
+   "sentenceId": "s09"
+  },
+  {
+   "id": "s10_0",
+   "from": 739,
+   "to": 824,
+   "text": "现在先转成文字 再让它整理就行",
+   "sentenceId": "s10"
+  },
+  {
+   "id": "s11_0",
+   "from": 831,
+   "to": 909,
+   "text": "整个流程就两步 转文字 再整理",
+   "sentenceId": "s11"
+  },
+  {
+   "id": "s12_0",
+   "from": 916,
+   "to": 958,
+   "text": "我们一步一步来",
+   "sentenceId": "s12"
+  },
+  {
+   "id": "s13_0",
+   "from": 965,
+   "to": 1019,
+   "text": "先看最简单的第一步",
+   "sentenceId": "s13"
+  },
+  {
+   "id": "s14_0",
+   "from": 1026,
+   "to": 1105,
+   "text": "第一步 先把会议录音转成文字",
+   "sentenceId": "s14"
+  },
+  {
+   "id": "s15_0",
+   "from": 1112,
+   "to": 1178,
+   "text": "把录音文件上传 选好语言",
+   "sentenceId": "s15"
+  },
+  {
+   "id": "s16_0",
+   "from": 1185,
+   "to": 1252,
+   "text": "比如 一场四十分钟的周会",
+   "sentenceId": "s16"
+  },
+  {
+   "id": "s17_0",
+   "from": 1259,
+   "to": 1343,
+   "text": "它会先转写 你等进度条走完就行",
+   "sentenceId": "s17"
+  },
+  {
+   "id": "s18_0",
+   "from": 1350,
+   "to": 1429,
+   "text": "转完之后 文字稿会分好发言人",
+   "sentenceId": "s18"
+  },
+  {
+   "id": "s19_0",
+   "from": 1436,
+   "to": 1490,
+   "text": "这个过程大概一分钟",
+   "sentenceId": "s19"
+  },
+  {
+   "id": "s20_0",
+   "from": 1497,
+   "to": 1575,
+   "text": "这一步 你只需要把录音传上去",
+   "sentenceId": "s20"
+  },
+  {
+   "id": "s21_0",
+   "from": 1582,
+   "to": 1630,
+   "text": "别的什么都不用管",
+   "sentenceId": "s21"
+  },
+  {
+   "id": "s22_0",
+   "from": 1637,
+   "to": 1710,
+   "text": "第二步 让它把纪要整理出来",
+   "sentenceId": "s22"
+  },
+  {
+   "id": "s23_0",
+   "from": 1717,
+   "to": 1801,
+   "text": "输入要求 纪要就开始自己生成了",
+   "sentenceId": "s23"
+  },
+  {
+   "id": "s24_0",
+   "from": 1808,
+   "to": 1850,
+   "text": "左边是原始文字",
+   "sentenceId": "s24"
+  },
+  {
+   "id": "s24_1",
+   "from": 1851,
+   "to": 1905,
+   "text": "右边是整理好的纪要",
+   "sentenceId": "s24"
+  },
+  {
+   "id": "s25_0",
+   "from": 1912,
+   "to": 1929,
+   "text": "说实话",
+   "sentenceId": "s25"
+  },
+  {
+   "id": "s25_1",
+   "from": 1930,
+   "to": 2009,
+   "text": "结论和待办都比我手写的清楚",
+   "sentenceId": "s25"
+  },
+  {
+   "id": "s26_0",
+   "from": 2016,
+   "to": 2101,
+   "text": "我只花了五分钟 其余全是它在跑",
+   "sentenceId": "s26"
+  },
+  {
+   "id": "s27_0",
+   "from": 2108,
+   "to": 2180,
+   "text": "我拿自己的五场会试了一遍",
+   "sentenceId": "s27"
+  },
+  {
+   "id": "s27_1",
+   "from": 2181,
+   "to": 2266,
+   "text": "平均每场从四十分钟 降到五分钟",
+   "sentenceId": "s27"
+  },
+  {
+   "id": "s28_0",
+   "from": 2273,
+   "to": 2333,
+   "text": "所以关键不是工具多强",
+   "sentenceId": "s28"
+  },
+  {
+   "id": "s29_0",
+   "from": 2340,
+   "to": 2412,
+   "text": "而是你的时间被省下了多少",
+   "sentenceId": "s29"
+  },
+  {
+   "id": "s30_0",
+   "from": 2419,
+   "to": 2498,
+   "text": "最后复述一遍 先转文字 再整理",
+   "sentenceId": "s30"
+  },
+  {
+   "id": "s31_0",
+   "from": 2505,
+   "to": 2535,
+   "text": "两步就够了",
+   "sentenceId": "s31"
+  },
+  {
+   "id": "s32_0",
+   "from": 2542,
+   "to": 2596,
+   "text": "你最想整理哪种会议？",
+   "sentenceId": "s32"
+  },
+  {
+   "id": "s33_0",
+   "from": 2603,
+   "to": 2669,
+   "text": "评论区告诉我 我们下期见",
+   "sentenceId": "s33"
+  }
+ ],
+ "chapters": [
+  {
+   "index": 1,
+   "title": "转成文字",
+   "label": "STEP 1",
+   "hud": {
+    "stack": [
+     "转成文字",
+     "整理纪要"
+    ]
+   },
+   "from": 1026,
+   "to": 1637,
+   "cardSceneId": "sc08",
+   "id": "ch1"
+  },
+  {
+   "index": 2,
+   "title": "整理纪要",
+   "label": "STEP 2",
+   "hud": {
+    "stack": [
+     "转成文字",
+     "整理纪要"
+    ]
+   },
+   "from": 1637,
+   "to": 2108,
+   "cardSceneId": "sc13",
+   "id": "ch2"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "sc01",
+   "from": 0,
+   "dur": 165,
+   "sentenceIds": [
+    "s01",
+    "s02"
+   ],
+   "kind": "host_tag",
+   "pip": "off",
+   "props": {},
+   "rhythm": "tight"
+  },
+  {
+   "id": "sc02",
+   "from": 165,
+   "dur": 134,
+   "sentenceIds": [
+    "s03",
+    "s04"
+   ],
+   "kind": "broll",
+   "pip": "off",
+   "props": {
+    "src": "broll_desk",
+    "kind": "image",
+    "dim": 0.45
+   }
+  },
+  {
+   "id": "sc03",
+   "from": 299,
+   "dur": 171,
+   "sentenceIds": [
+    "s05",
+    "s06"
+   ],
+   "kind": "host_tag",
+   "pip": "off",
+   "props": {}
+  },
+  {
+   "id": "sc04",
+   "from": 470,
+   "dur": 184,
+   "sentenceIds": [
+    "s07",
+    "s08"
+   ],
+   "kind": "brand_card",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "logo": "logo",
+    "name": "Claude",
+    "variant": "white_card"
+   }
+  },
+  {
+   "id": "sc05",
+   "from": 654,
+   "dur": 177,
+   "sentenceIds": [
+    "s09",
+    "s10"
+   ],
+   "kind": "compare",
+   "pip": "off",
+   "props": {
+    "variant": "pills_vs",
+    "left": {
+     "label": "手动整理",
+     "items": [
+      "回听",
+      "打字",
+      "核对",
+      "排版"
+     ],
+     "atWord": {
+      "sentenceId": "s09",
+      "word": "以前"
+     }
+    },
+    "right": {
+     "label": "交给AI",
+     "items": [
+      "转文字",
+      "提结论",
+      "列待办",
+      "发群里"
+     ],
+     "atWord": {
+      "sentenceId": "s10",
+      "word": "现在"
+     }
+    },
+    "listAtWord": {
+     "sentenceId": "s10",
+     "word": "转成文字"
+    }
+   }
+  },
+  {
+   "id": "sc06",
+   "from": 831,
+   "dur": 85,
+   "sentenceIds": [
+    "s11"
+   ],
+   "kind": "step_list",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "activeIndex": 1,
+    "steps": [
+     {
+      "no": "01",
+      "title": "转成文字",
+      "thumb": "thumb_1",
+      "atWord": {
+       "sentenceId": "s11",
+       "word": "转文字"
+      }
+     },
+     {
+      "no": "02",
+      "title": "整理纪要",
+      "thumb": "thumb_2",
+      "atWord": {
+       "sentenceId": "s11",
+       "word": "再整理"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "sc07",
+   "from": 916,
+   "dur": 110,
+   "sentenceIds": [
+    "s12",
+    "s13"
+   ],
+   "kind": "host_full",
+   "pip": "off",
+   "props": {}
+  },
+  {
+   "id": "sc08",
+   "from": 1026,
+   "dur": 86,
+   "sentenceIds": [
+    "s14"
+   ],
+   "kind": "chapter_card",
+   "pip": "off",
+   "props": {
+    "label": "STEP 1",
+    "title": "转成文字",
+    "ghostText": "TEXT"
+   }
+  },
+  {
+   "id": "sc09",
+   "from": 1112,
+   "dur": 147,
+   "sentenceIds": [
+    "s15",
+    "s16"
+   ],
+   "kind": "screen_demo",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "src": "screen_prompt",
+    "kind": "video"
+   },
+   "camera": [
+    {
+     "kind": "push",
+     "at": 6,
+     "dur": 28,
+     "scale": [
+      1,
+      1.12
+     ],
+     "origin": [
+      0.5,
+      0.5
+     ],
+     "ease": "inOutCubic",
+     "hold": true
+    }
+   ]
+  },
+  {
+   "id": "sc10",
+   "from": 1259,
+   "dur": 91,
+   "sentenceIds": [
+    "s17"
+   ],
+   "kind": "screen_demo",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "src": "screen_ask",
+    "kind": "video"
+   },
+   "camera": [
+    {
+     "kind": "pull",
+     "at": 4,
+     "dur": 26,
+     "scale": [
+      1.12,
+      1.0
+     ],
+     "origin": [
+      0.5,
+      0.5
+     ],
+     "ease": "inOutCubic",
+     "hold": true
+    }
+   ]
+  },
+  {
+   "id": "sc11",
+   "from": 1350,
+   "dur": 147,
+   "sentenceIds": [
+    "s18",
+    "s19"
+   ],
+   "kind": "screen_demo",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "src": "screen_script",
+    "kind": "video"
+   },
+   "camera": [
+    {
+     "kind": "push",
+     "at": 4,
+     "dur": 28,
+     "scale": [
+      1,
+      1.1
+     ],
+     "origin": [
+      0.7,
+      0.3
+     ],
+     "ease": "inOutCubic",
+     "hold": true
+    }
+   ]
+  },
+  {
+   "id": "sc12",
+   "from": 1497,
+   "dur": 140,
+   "sentenceIds": [
+    "s20",
+    "s21"
+   ],
+   "kind": "host_punch",
+   "pip": "off",
+   "props": {},
+   "camera": [
+    {
+     "kind": "punch",
+     "at": 4,
+     "dur": 20,
+     "scale": [
+      1,
+      1.08
+     ],
+     "origin": [
+      0.5,
+      0.38
+     ],
+     "ease": "outCubic",
+     "hold": true
+    }
+   ]
+  },
+  {
+   "id": "sc13",
+   "from": 1637,
+   "dur": 80,
+   "sentenceIds": [
+    "s22"
+   ],
+   "kind": "chapter_card",
+   "pip": "off",
+   "props": {
+    "label": "STEP 2",
+    "title": "整理纪要",
+    "ghostText": "NOTES"
+   }
+  },
+  {
+   "id": "sc14",
+   "from": 1717,
+   "dur": 91,
+   "sentenceIds": [
+    "s23"
+   ],
+   "kind": "screen_demo",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "src": "screen_render",
+    "kind": "video"
+   },
+   "camera": [
+    {
+     "kind": "push",
+     "dur": 28,
+     "scale": [
+      1,
+      1.12
+     ],
+     "origin": [
+      0.8,
+      0.15
+     ],
+     "ease": "inOutCubic",
+     "hold": true,
+     "at": 0
+    }
+   ]
+  },
+  {
+   "id": "sc15",
+   "from": 1808,
+   "dur": 104,
+   "sentenceIds": [
+    "s24"
+   ],
+   "kind": "compare",
+   "pip": "off",
+   "props": {
+    "variant": "result_pair",
+    "left": {
+     "label": "原始文字",
+     "items": [],
+     "media": "clip_before",
+     "atWord": {
+      "sentenceId": "s24",
+      "word": "左边"
+     }
+    },
+    "right": {
+     "label": "纪要",
+     "items": [],
+     "media": "clip_after",
+     "atWord": {
+      "sentenceId": "s24",
+      "word": "右边"
+     }
+    }
+   }
+  },
+  {
+   "id": "sc16",
+   "from": 1912,
+   "dur": 196,
+   "sentenceIds": [
+    "s25",
+    "s26"
+   ],
+   "kind": "host_full",
+   "pip": "off",
+   "props": {}
+  },
+  {
+   "id": "sc17",
+   "from": 2108,
+   "dur": 165,
+   "sentenceIds": [
+    "s27"
+   ],
+   "kind": "big_number",
+   "pip": {
+    "preset": "bl_circle"
+   },
+   "props": {
+    "variant": "center",
+    "bg": "broll_city",
+    "items": [
+     {
+      "label": "以前整理一场（示例数据）",
+      "value": "40",
+      "unit": "分钟",
+      "sub": "BEFORE",
+      "atWord": {
+       "sentenceId": "s27",
+       "word": "四十分钟"
+      }
+     },
+     {
+      "label": "现在整理一场（示例数据）",
+      "value": "5",
+      "unit": "分钟",
+      "sub": "NOW",
+      "atWord": {
+       "sentenceId": "s27",
+       "word": "五分钟"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "sc18",
+   "from": 2273,
+   "dur": 146,
+   "sentenceIds": [
+    "s28",
+    "s29"
+   ],
+   "kind": "host_punch",
+   "pip": "off",
+   "props": {},
+   "camera": [
+    {
+     "kind": "punch",
+     "at": 4,
+     "dur": 20,
+     "scale": [
+      1,
+      1.08
+     ],
+     "origin": [
+      0.5,
+      0.38
+     ],
+     "ease": "outCubic",
+     "hold": true
+    }
+   ]
+  },
+  {
+   "id": "sc19",
+   "from": 2419,
+   "dur": 123,
+   "sentenceIds": [
+    "s30",
+    "s31"
+   ],
+   "kind": "summary_card",
+   "pip": "off",
+   "props": {
+    "variant": "single",
+    "title": "两步搞定",
+    "items": [
+     {
+      "no": "1",
+      "text": "先转文字",
+      "atWord": {
+       "sentenceId": "s30",
+       "word": "转文字"
+      }
+     },
+     {
+      "no": "2",
+      "text": "再整理",
+      "atWord": {
+       "sentenceId": "s30",
+       "word": "再整理"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "sc20",
+   "from": 2542,
+   "dur": 158,
+   "sentenceIds": [
+    "s32",
+    "s33"
+   ],
+   "kind": "host_tag",
+   "pip": "off",
+   "props": {}
+  }
+ ],
+ "overlays": [
+  {
+   "kind": "head_flank",
+   "side": "left",
+   "text": "四十分钟",
+   "accent": "red",
+   "layer": "fixed",
+   "enter": {
+    "preset": "std",
+    "fx": "spring_pop"
+   },
+   "from": 57,
+   "dur": 108,
+   "trigger": {
+    "sentenceId": "s01",
+    "word": "四十分钟",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc01_0",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "head_flank",
+   "side": "right",
+   "text": "五分钟",
+   "accent": "lime",
+   "layer": "fixed",
+   "enter": {
+    "preset": "std",
+    "fx": "spring_pop"
+   },
+   "from": 125,
+   "dur": 40,
+   "trigger": {
+    "sentenceId": "s02",
+    "word": "五分钟",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc01_1",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "head_flank",
+   "side": "right",
+   "text": "两步",
+   "accent": "lime",
+   "layer": "fixed",
+   "enter": {
+    "preset": "std",
+    "fx": "spring_pop"
+   },
+   "from": 344,
+   "dur": 126,
+   "trigger": {
+    "sentenceId": "s05",
+    "word": "两步",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc03_0",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "callout",
+   "box": {
+    "x": 0.3,
+    "y": 0.35,
+    "w": 0.4,
+    "h": 0.3
+   },
+   "label": "先上传",
+   "arrow": "down",
+   "style": "dashed_orange",
+   "layer": "content",
+   "enter": {
+    "preset": "fast",
+    "fx": "pop"
+   },
+   "from": 1120,
+   "dur": 139,
+   "trigger": {
+    "sentenceId": "s15",
+    "word": "录音",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc09_0",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "spotlight",
+   "box": {
+    "x": 0.53,
+    "y": 0.18,
+    "w": 0.33,
+    "h": 0.16
+   },
+   "label": "分好发言人",
+   "layer": "content",
+   "enter": {
+    "preset": "fast"
+   },
+   "from": 1413,
+   "dur": 84,
+   "trigger": {
+    "sentenceId": "s18",
+    "word": "发言人",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc11_0",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "callout",
+   "box": {
+    "x": 0.74,
+    "y": 0.1,
+    "w": 0.14,
+    "h": 0.08
+   },
+   "arrow": "down",
+   "style": "dashed_orange",
+   "layer": "content",
+   "enter": {
+    "preset": "fast",
+    "fx": "pop"
+   },
+   "from": 1719,
+   "dur": 89,
+   "trigger": {
+    "sentenceId": "s23",
+    "word": "输入要求",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc14_0",
+   "exit": {
+    "preset": "cut"
+   }
+  },
+  {
+   "kind": "head_flank",
+   "side": "right",
+   "text": "哪种会议",
+   "accent": "red",
+   "layer": "fixed",
+   "enter": {
+    "preset": "std",
+    "fx": "spring_pop"
+   },
+   "from": 2575,
+   "dur": 125,
+   "trigger": {
+    "sentenceId": "s32",
+    "word": "哪种会议",
+    "offsetFrames": 2
+   },
+   "id": "ov_sc20_0",
+   "exit": {
+    "preset": "cut"
+   }
+  }
+ ]
+}
