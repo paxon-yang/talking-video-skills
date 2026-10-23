@@ -58,6 +58,6 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 ## 5. 相关
 - 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
-- 本 skill 的细节在 `references/`：稿子与钩子（hooks-and-copy、thinking、templates）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- 本 skill 的细节在 `references/`：稿子与钩子（hooks-and-copy、thinking、templates、audience-triggers 观众七个「想」）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
 - `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
 - 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`
