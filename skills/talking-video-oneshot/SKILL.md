@@ -1,6 +1,6 @@
 ---
 name: talking-video-oneshot
-description: 一句话需求 → 口播 / 动效讲解视频成片（含配音对齐字幕、数字人抠像融合、AE 级动效、打字机与音效、封面和一句话文案）。用户说「帮我做一条关于 X 的视频」「做个口播视频」「做一条讲 X 的动效视频」「把这段稿子做成成片」时使用。本 skill 是总入口：自己决定默认值、自动推进全流程，只在「只有人能做」的环节停下；细节分别读 combo-style（口播包装与协作）和 ae-motion-craft（动效规律与方法）。
+description: 一句话需求 → 先从自己的素材库（积木 / 规律 / 风格 / 原始素材）构思选型，再做成口播 / 动效讲解视频成片（含配音对齐字幕、数字人抠像融合、AE 级动效、打字机与音效、封面和一句话文案）。用户说「帮我做一条关于 X 的视频」「做个口播视频」「做一条讲 X 的动效视频」「把这段稿子做成成片」时使用。本 skill 是总入口：自己决定默认值、自动推进全流程，只在「只有人能做」的环节停下；细节分别读 combo-style（口播包装与协作）和 ae-motion-craft（动效规律与方法）。
 ---
 
 # 一句话出片：总入口
@@ -21,19 +21,24 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 固定默认：1920×1080、30fps、60–80 秒、不做 BGM（只交人声 + 音效，音乐用户自己加）、字幕胶囊、浅色或暗色按主题定、成片 −16 LUFS、封面横竖各一对、一句话文案。
 
+## 0.5 构思与选素材（写稿之前，必做）
+拿到需求后**先想用哪些素材，再写稿**。读素材库目录（积木 / 规律 / 风格 / 原始素材，格式见 `../video-asset-prep/references/library-catalog.md`），按 `references/asset-selection.md` 四步走：拆需求成 4–8 个点 → 定主风格 → 每个点配首选 + 备选积木（查规律约束、避开最近两支用过的、优先用上新沉淀的素材、写清缺口怎么办）→ 按素材反推结构。产出 `selection.md` 选型单，随稿子一起交，默认不单独停下来问。
+
 ## 1. 流水线（自动推进）
 | 步 | 做什么 | 谁 | 产物 / 验收 |
 |---|---|---|---|
-| S1 稿子 | 压成 8–12 句口播：每句 ≤20 字、一句一个意思、数字单独成句；去 AI 味（短句、口语、少排比）；核对事实；字数 ≈ 时长×4.8 | Claude | `script_lines.json`；事实有疑问才打扰用户 |
+| S0 选型 | 见 0.5 节：读素材库目录 → 选型单 | Claude | `selection.md`；每个点有首选 + 备选 + 理由 |
+| S1 稿子 | 按选型单的结构写，压成 8–12 句口播：每句 ≤20 字、一句一个意思、数字单独成句；去 AI 味（短句、口语、少排比）；核对事实；字数 ≈ 时长×4.8 | Claude | `script_lines.json`；事实有疑问才打扰用户 |
 | S2 配音 | 稿子按配音工具读法改写（缩写写成 `A I` 逐字母）→ 用户生成音频 → 本地停顿封顶 0.4 s | 用户给音频 | `voice.mp3`；**这是唯一必须等人的环节**（没有就占位） |
 | S3 对齐 | whisper 强制对齐到逐字 → 字幕按词切 → 与波形独立核起音 | Claude | `words.json` `subs.json`；字幕起音 ≤3 帧 |
 | S4 数字人（可选）| 浏览器驱动数字人工具：上传音频→生成→下载。身份验证、付款、删除只由用户做 | Claude + 用户 | 绿幕 mp4 |
 | S5 抠像（可选）| 色差键 + 边缘延伸 → VP9 alpha WebM；解码曲线补偿；口型提前 3 帧 | Claude | `key_host.py` |
-| S6 镜头表 | 全部镜头时间从词级对齐表推出（句首 −6 帧为切点），不手填帧号 | Claude | `timeline.ts` 单一事实来源 |
+| S6 镜头表 | 全部镜头时间从词级对齐表推出（句首 −6 帧为切点），不手填帧号；组件取自选型单 | Claude | `timeline.ts` 单一事实来源 |
 | S7 动效 | 每句一个镜头、一台相机、一个焦点；所有打字都用打字机动效并登记 `typing.ts`；音效按事件生成 | Claude | 见 ae-motion-craft |
 | S8 渲染 | 分段 + 看门狗：5 分钟无新帧即杀进程重试 ≤3 次；每段起止时间写日志 | Claude | 分段 mp4 → 拼接 → 混音 |
 | S9 自检 | 见第 3 节清单；对着真实文件时间戳和日志核对，不凭印象说「快好了」 | Claude | 自检表 |
 | S10 包装 | 横版 + 竖版封面（主图 + 备选）、缩略图尺寸检查、一句话网感文案 | Claude | 封面 4 张 + 文案 |
+| S11 回写 | 用到的积木补「用过」，被否掉的画面写进「不适合」，新积木登记入库 | Claude | 素材库目录已更新 |
 
 ## 2. 只有人能做的事（其余都自己做）
 配音音频生成、数字人身份验证、付款确认、删除账号/形象、最终审美验收。遇到这些**一次性说清要什么**，不要拆成多轮追问。
@@ -58,6 +63,6 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 ## 5. 相关
 - 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
-- 本 skill 的细节在 `references/`：稿子与钩子（hooks-and-copy、thinking、templates）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- 本 skill 的细节在 `references/`：构思与选素材（asset-selection）、稿子与钩子（hooks-and-copy、thinking、templates）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
 - `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
 - 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`
