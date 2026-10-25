@@ -10,7 +10,7 @@ description: 做口播 / 动效视频之前的备料：数字人（形象、绿�
 |---|---|---|
 | ① 数字人 | 有一个形象 + look；绿幕样片通过；抠像后边缘干净；口型提前量定好；清晰度测过 | `references/digital-human.md`、`references/voice-and-host.md` 第二部分 |
 | ② 声音 | 克隆声音；读音规则表（缩写、儿化、近音字）；停顿封顶参数 | `references/voice-and-host.md` 第一部分 |
-| ③ 动效规律 | 至少过一遍规律层，知道缓动两档、错峰、点击反馈、转场、后期克制 | `references/principles.md`；UI 卡片放进实拍、实景转场看 `references/vlog-ui-fusion-and-transitions.md` |
+| ③ 动效规律 | 至少过一遍规律层，知道缓动两档、错峰、点击反馈、转场、后期克制 | `references/principles.md`；UI 卡片放进实拍、实景转场看 `references/vlog-ui-fusion-and-transitions.md`；要做「炫酷又完美融入」的实景 UI 成片（冻结视差、实物变玻璃、字块重组、海面 3D 字），照 `references/realworld-ui-fusion-playbook.md` 的流程和技法 |
 | ④ 积木库 | 自己的 Remotion 组件库：标题、卡片、图表、图标、窗口、转场；每个带参数、带校准记录 | `references/method-dissect.md`、`references/method-replicate.md` |
 | ⑤ 固定框架 | 字幕胶囊样式、背景（浅色/暗色各一）、头像、封面模板 | `references/frame-kit.md` |
 | ⑥ 降级路径 | 知道 Remotion 做不到什么（3D、玻璃、实拍合成）时怎么办 | `references/fallback-ladder.md` |
