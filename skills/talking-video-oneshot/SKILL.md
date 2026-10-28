@@ -7,6 +7,10 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 目标：用户只说需求，Claude 自己把稿子、字幕、动效、音效、渲染、自检、封面、文案做完，交一个成片。**不要每步都问**，不要让用户确认可以自己决定的事。
 
+## 口播片的默认风格（必读，不用问用户）
+**证据型口播（参考博主A × 博主B 那一路）：主播讲道理，真实素材当证据。** 画面主体是录屏、官网和产品界面、评论和新闻截图、成品片段；自绘卡片只做关键词、数字、步骤，≤20% 时长；宣传片式卡片动效（环绕、3D 展开、飞镜）每片 ≤1 处。素材从哪来、怎么拿、怎么上画面见 `references/material-sourcing.md`，开工前必读；画面选型照 `references/visual-mapping.md`。
+用户点名要「宣传片 / 纯动效」时才换成卡片动效路线（`references/promo-and-hosted-pipeline.md`）。
+
 ## 先查备料（开工前 30 秒）
 对照 `../video-asset-prep/SKILL.md` 的备料清单：数字人（出镜版才需要）、声音、积木库、固定框架。**缺哪项就转去备哪项，不要硬做**；纯动效版不需要数字人。备料齐了，下面全部自动推进。
 
@@ -28,8 +32,9 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 | S2 配音 | 稿子按配音工具读法改写（缩写写成 `A I` 逐字母）→ 用户生成音频 → 本地停顿封顶 0.4 s | 用户给音频 | `voice.mp3`；**这是唯一必须等人的环节**（没有就占位） |
 | S3 对齐 | whisper 强制对齐到逐字 → 字幕按词切 → 与波形独立核起音 | Claude | `words.json` `subs.json`；字幕起音 ≤3 帧 |
 | S4 数字人（出镜版必做，Claude 来做）| 浏览器驱动 HeyGen（已登录的 Chrome；云端会话经用户 Mac 的 Remote Control）：音频驱动、用形象自带背景、1080p、关水印和自带字幕 → 下载 → 25fps 转 30fps。**不要让用户去生成**；身份验证、付款、积分不足才找用户 | Claude | `host.mp4` |
-| S5 主播层 | **不抠像、不换背景**，直接用 HeyGen 自带背景；卡片和动效叠在主播画面上（从手边升起、身边停留、收回），炫段时主播缩小窗、背景用他自己的画面压暗虚化；口型提前 2–3 帧 | Claude | 主播层 |
+| S5 主播层 | **不抠像、不换背景**，直接用 HeyGen 自带背景；证据段主播缩成圆形 PIP 陪讲，每 15–20 s 回大景；口型提前 2–3 帧 | Claude | 主播层 |
 | S6 镜头表 | 全部镜头时间从词级对齐表推出（句首 −6 帧为切点），不手填帧号 | Claude | `timeline.ts` 单一事实来源 |
+| S6.5 素材 | 选型单每行填「素材来源」，按 material-sourcing.md 优先级去截图、录屏、取官方图标；云端访问不到的站点经用户 Mac 的 Remote Control 用已登录 Chrome 截 | Claude | `src/` 素材 + 来源登记；真实素材 ≥60% 非主播时长 |
 | S7 动效 | 每句一个镜头、一台相机、一个焦点；所有打字都用打字机动效并登记 `typing.ts`；音效按事件生成 | Claude | 见 ae-motion-craft |
 | S8 渲染 | 分段 + 看门狗：5 分钟无新帧即杀进程重试 ≤3 次；每段起止时间写日志 | Claude | 分段 mp4 → 拼接 → 混音 |
 | S9 自检 | 见第 3 节清单；对着真实文件时间戳和日志核对，不凭印象说「快好了」 | Claude | 自检表 |
@@ -46,6 +51,7 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 - 每个打字块：字符数 = 键声数
 - 画面无第三方品牌/真人/内部文件名；中文视频画面文字用词通用
 - 渲染产物时间戳晚于最后一次改动；日志无失败段
+- 真实素材占非主播时长 ≥60%、自绘卡片 ≤20%（逐镜头标注后算）；没有纯色底、黑网格底镜头
 
 ## 4. 铁律（踩过的）
 1. **不猜原因**：渲染卡住先看文件修改时间 vs 当前时间、读完整日志，再下结论。
@@ -54,10 +60,11 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 4. 字幕必须逐词对齐，绝不按字数估算。
 5. 不做 BGM；不放说明性小字；浅色底里不放大块深色；紫色不用。
 6. 用户一句具体反馈，只重做受影响的镜头，不整片重来。
-7. 交付后不重复汇报过程，给：位置、改了什么、已知瑕疵、封面、一句话文案。
+7. 能截到真东西就不许自己画假的界面、假聊天、假进度条。
+8. 交付后不重复汇报过程，给：位置、改了什么、已知瑕疵、封面、一句话文案。
 
 ## 5. 相关
 - 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
-- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、默认风格与素材采集（material-sourcing）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
 - `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
 - 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`
