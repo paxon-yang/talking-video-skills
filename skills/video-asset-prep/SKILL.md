@@ -1,6 +1,6 @@
 ---
 name: video-asset-prep
-description: 做口播 / 动效视频之前的备料：数字人（形象、绿幕生成、抠像、清晰度、口型校准）、克隆声音（读音规则、停顿处理）、沉淀动效积木（拆解参考视频→提取带数值的规律→做成带参数的组件→逐镜头复刻验证）、固定框架（字幕胶囊、背景、封面）。用户说「准备数字人」「学这个动效」「拆一下这个视频的动效」「沉淀成积木」「做我自己的动效库」「备料」「我还缺什么才能开始做视频」时使用。备齐后用 talking-video-oneshot 做片。
+description: 做口播 / 动效视频之前的备料：数字人（形象、生成、清晰度、口型校准）、克隆声音（读音规则、停顿处理）、沉淀动效积木（拆解参考视频→提取带数值的规律→做成带参数的组件→逐镜头复刻验证）、固定框架（字幕胶囊、背景、封面）。用户说「准备数字人」「学这个动效」「拆一下这个视频的动效」「沉淀成积木」「做我自己的动效库」「备料」「我还缺什么才能开始做视频」时使用。备齐后用 talking-video-oneshot 做片。
 ---
 
 # 备料：一次投入，之后每条视频都用
@@ -8,7 +8,7 @@ description: 做口播 / 动效视频之前的备料：数字人（形象、绿�
 ## 备料清单（先对照，缺什么做什么）
 | 备料项 | 做到什么算好 | 读什么 |
 |---|---|---|
-| ① 数字人 | 有一个形象 + look；绿幕样片通过；抠像后边缘干净；口型提前量定好；清晰度测过 | `references/digital-human.md`、`references/voice-and-host.md` 第二部分 |
+| ① 数字人 | 有一个形象 + look；样片通过（自带背景，不抠像）；口型提前量定好；清晰度测过 | `references/digital-human.md`、`references/voice-and-host.md` 第二部分 |
 | ② 声音 | 克隆声音；读音规则表（缩写、儿化、近音字）；停顿封顶参数 | `references/voice-and-host.md` 第一部分 |
 | ③ 动效规律 | 至少过一遍规律层，知道缓动两档、错峰、点击反馈、转场、后期克制 | `references/principles.md`；UI 卡片放进实拍、实景转场看 `references/vlog-ui-fusion-and-transitions.md` |
 | ④ 积木库 | 自己的 Remotion 组件库：标题、卡片、图表、图标、窗口、转场；每个带参数、带校准记录 | `references/method-dissect.md`、`references/method-replicate.md` |
