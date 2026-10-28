@@ -1,6 +1,7 @@
 # 口播默认风格与素材采集（证据型口播：博主A × 博主B 路子）
 
 > 2026-10-28 定为口播片的**默认风格**。起因：第五支第一稿整片用自绘 3D 卡片（环绕、展开、卡片从手上升起），用户评价「一群卡片，感觉 low」，要的是「网上的素材、精美一点」，「口播类基本都得这样做」。
+> 本文件不新增素材流程：B-roll 生成和下载照旧走 production-playbook.md 的 **S2.5（Gemini 生成）/ S5（Pexels 下载、逐条记 LICENSES.md、30fps 转码）**，提示词看 gemini-asset-prompts.md。这里只补「口播片里素材必须当主体」的硬指标和截图/录屏类素材的拿法。
 > 参数细节不在这里重复：版式看 packaging.md，内容→画面看 visual-mapping.md，节奏看 comfort-rules.md。本文件只规定**画面主体从哪来**。
 
 ## 1. 一句话
@@ -26,7 +27,7 @@
 2. **被提到的产品本身**：官网首页、产品界面、操作录屏、官方图标（真官方，不用近似图标）。
 3. **社会证据**：评论区、私信、新闻标题、榜单和数据页截图（隐去他人头像和昵称）。
 4. **成品**：自己往期视频的片段、样片截图墙。
-5. **B-roll**：只能用有授权的（Netflix Open Content、用户自己拍的、AI 生成的实景）。
+5. **B-roll**：按 production-playbook S2.5 / S5 出（Gemini 生成或 Pexels 开源下载，记 LICENSES.md）。比喻句（菜谱、食材、天变了这类）优先给 B-roll，不画卡片。
 6. 以上都没有 → 关键词卡或大数字（压暗主播画面做底）。
 
 ## 4. 怎么拿到素材
@@ -37,6 +38,7 @@
 | 产品操作录屏 | 同上；手机端操作请用户录（用户已录过 Fish Audio，一条 30 秒内） | 裁掉状态栏和录屏指示 |
 | 制作过程 | 云端直接录：终端渲染日志、Remotion Studio、静帧墙、GitHub 页面 | 不露密钥、内部路径可以露 |
 | 评论 / 私信 | 用户截图；没有就请他截 | 打码他人信息 |
+| B-roll（开源站） | production-playbook S5；云端网络常拦 Pexels/Pixabay/Unsplash，被拦就经用户 Mac 的 Remote Control 下载后推私有仓库 tmp 分支取回 | 每条记 LICENSES.md |
 | 官方图标 | `@lobehub/icons-static-svg`（npm），没有的去官网取 SVG/PNG | 低清 PNG 只能小尺寸用 |
 
 素材统一放 `public/projects/<片名>/src/`，在选型单里登记文件名、来源网址、截取日期。
