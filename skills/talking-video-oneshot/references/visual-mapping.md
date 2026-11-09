@@ -33,7 +33,7 @@
 | 问题清单（逐字出） | 问题卡 + 打字机 | question_card | ✅ | §6 打字机动画 |
 | 评分、结论 | 总结卡逐条点亮 | summary_card(single/double) | ✅ | §6 |
 | 金句 | 深红底金句卡 | summary_card(quote) | ✅ | |
-| 情绪、价值观 | 宽银幕 B-roll + 大字 | broll(widescreen) + overlay keyword | ✅；毛笔大字 BrushWord ❌，用 keyword overlay 或 ghost_word 替代 | |
+| 情绪、价值观 | 宽银幕 B-roll + 大字 | broll(widescreen) + overlay keyword | ✅；毛笔大字用积木 BrushSlam（每片 ≤2 次） | |
 | 聚焦一块界面 | 聚光灯（其余压暗/模糊） | spotlight overlay（layer content） | ✅ | 蒙版 + 调节 |
 | 账号片尾 | 片尾卡 | closing | ❌ 不要做（见 forbidden.md）；用 host_tag + 夹头词收尾 | |
 | 章节角标（数据型，左下徽章） | Badge | overlay badge | ❌ 渲染器忽略；用左上 HUD 代替 | |
@@ -116,3 +116,7 @@
 | 成品展示 | screen_demo 全屏替代 clip_full | 1–4s | 关，撤字幕 |
 
 没有素材的 evidence 句 → 降级为 keyword_card + 主播，**不用占位图凑**。每个 Scene 对应 ≥1 句且起点在句首，**绝不切在句中**；一个 beat 只放一个观点。
+
+## 4. 动效积木：按意图查，不凭记忆
+
+上面的表只管口播主轨的 `scene.kind`。动效积木（motion 积木 110+ 个、标题预设 13 个、shotcraft 镜头 123 个）**按意图收在积木库根目录 `BLOCK_PICKER.md`**：开头 3 秒 / 概念与关键词 / 举证据 / 数字与对比 / 列举与步骤 / 转场与节奏 / 背景，每行给首选、备选、上限、别用，另有按片型的默认组合。做片时 S6.6 按镜头表逐行查它，选型单写「意图 → 积木 → 为什么」。新积木入库时必须在这张表里挂意图（`npm run lint:picker` 检查）。

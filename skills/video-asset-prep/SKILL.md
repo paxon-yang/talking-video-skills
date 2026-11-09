@@ -10,8 +10,8 @@ description: 做口播 / 动效视频之前的备料：数字人（形象、生�
 |---|---|---|
 | ① 数字人 | 有一个形象 + look；样片通过（自带背景，不抠像）；口型提前量定好；清晰度测过 | `references/digital-human.md`、`references/voice-and-host.md` 第二部分 |
 | ② 声音 | 克隆声音；读音规则表（缩写、儿化、近音字）；停顿封顶参数 | `references/voice-and-host.md` 第一部分 |
-| ③ 动效规律 | 至少过一遍规律层，知道缓动两档、错峰、点击反馈、转场、后期克制 | `references/principles.md`；UI 卡片放进实拍、实景转场看 `references/vlog-ui-fusion-and-transitions.md` |
-| ④ 积木库 | 自己的 Remotion 组件库：标题、卡片、图表、图标、窗口、转场；每个带参数、带校准记录 | `references/method-dissect.md`、`references/method-replicate.md` |
+| ③ 动效规律 | 至少过一遍规律层，知道缓动两档、错峰、点击反馈、转场、后期克制 | `references/principles.md`；UI 卡片放进实拍、实景转场看 `references/vlog-ui-fusion-and-transitions.md`；空间折叠、转身换景、日程字幕、odd vlog 流派看 `references/vlog-fold-and-day-stamp.md` |
+| ④ 积木库 | 自己的 Remotion 组件库：标题、卡片、图表、图标、窗口、转场；每个带参数、带校准记录；**每个积木在积木选型表里挂上「口播里什么意图用它」** | `references/method-dissect.md`、`references/method-replicate.md` |
 | ⑤ 固定框架 | 字幕胶囊样式、背景（浅色/暗色各一）、头像、封面模板 | `references/frame-kit.md` |
 | ⑥ 降级路径 | 知道 Remotion 做不到什么（3D、玻璃、实拍合成）时怎么办 | `references/fallback-ladder.md` |
 
@@ -20,7 +20,7 @@ description: 做口播 / 动效视频之前的备料：数字人（形象、生�
 ## 沉淀积木：学动效的循环
 1. **拿素材**：用户给一条精美动效参考（录屏/视频）；`ffprobe` 看规格；可变帧率先做恒定帧率代理，原片只读。
 2. **拆解**：通览抽帧定位 → 每个事件 12–30 fps 密集抽帧 → 测位移 / 缩放 / 模糊 / 亮度 → 拟合缓动曲线 → 写技法卡，每个数值标「测 / 约」和置信度。
-3. **入库**：先查有没有现成积木能调参或组合；没有才新做。新规律写进规律库：规则 → 数值 → 来源 → 置信度。
+3. **入库**：先查有没有现成积木能调参或组合；没有才新做。新规律写进规律库：规则 → 数值 → 来源 → 置信度。**新积木必须同时写进积木库的选型表（私有积木库根目录 `BLOCK_PICKER.md`：口播意图 → 首选 / 备选 / 上限 / 别用），并跑 `npm run lint:picker` 通过；没挂意图的积木不算入库**——否则做片时不会被想起来。
 4. **复刻**：做校准小合成，用卡片参数渲一次、量一次，偏差 ±15% 通过；只有独立像素检验才能证明原片数值对。
 5. **并排校准**：左原片右我们的对照图，写差距与「约像几成」，交用户看，按反馈改。
 6. **推翻也记录**：被测量推翻的结论记进规律库的「被推翻的结论」，避免重犯。
