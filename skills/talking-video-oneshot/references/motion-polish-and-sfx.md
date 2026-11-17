@@ -40,6 +40,12 @@ make_bee_full.py (+make_en_timeline)  →  apply_transitions_bee.py  →  apply_
 - `apply_transitions_bee.py` 的模式：B-roll→host 交替 zoom_through / slide_push；卡片→B-roll 只挑两处（写死 id）给 wipe/flash_cut；断言 `cur.dur ≥ 转场帧数+4` 且 `prev.dur ≥ 转场帧数`；先删旧转场再写（幂等）；保留章节卡自带的 push_blur。换片子时改 `CARD_TO_BROLL` 与镜头类型判断即可。
 - **已知瑕疵**：zoom_through 在窗口边缘有伪影（待修）。
 
+### 3.0 通用点击音与提示铃（2026-11-17 用户定，优先于下表的合成 tick / ding）
+- 通用点击 = 积木库 `public/sfx/shotcraft/ui/ui-select-click.mp3`（Freesound CC0「mouse click」，试听编号 C2），变体 `switch-tap.mp3`（升调）/ `switch-click-quick.mp3`（降调），连续多下三个轮换。
+- **不需要画面里有鼠标**：按钮按下、开关、勾选、卡片或选项被选中、列表项逐条点亮、标签落位、图标点亮、数字跳格、打字结束，都默认用它。用户原话：「这个很需要的，不一定非要鼠标出现才点击，这个应该很常见」。
+- 提示铃 = `ui/chime-crystal.mp3`（Freesound CC0「Quiz Gameshow Correct Ping 09」，编号 D2）：完成、答对、金句落定、结尾。
+- 规则全文在积木库 `scripts/sfx_rules.md` 第 0 节；新音效只收 CC0（来源与筛选脚本见积木库 `sfx_openverse/`）。
+
 ## 3. SFX 音效库（`scripts/make_sfx_lib.py` 纯 numpy/scipy 合成，48k 立体声，峰值 -14 dBFS → `public/sfx/*.wav` + `manifest.json`）
 | 名称 | 时长 | 用途 |
 |---|---|---|
