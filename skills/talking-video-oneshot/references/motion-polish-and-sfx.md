@@ -44,6 +44,7 @@ make_bee_full.py (+make_en_timeline)  →  apply_transitions_bee.py  →  apply_
 - 通用点击 = 积木库 `public/sfx/shotcraft/ui/ui-select-click.mp3`（Freesound CC0「mouse click」，试听编号 C2），变体 `switch-tap.mp3`（升调）/ `switch-click-quick.mp3`（降调），连续多下三个轮换。
 - **不需要画面里有鼠标**：按钮按下、开关、勾选、卡片或选项被选中、列表项逐条点亮、标签落位、图标点亮、数字跳格、打字结束，都默认用它。用户原话：「这个很需要的，不一定非要鼠标出现才点击，这个应该很常见」。
 - 提示铃 = `ui/chime-crystal.mp3`（Freesound CC0「Quiz Gameshow Correct Ping 09」，编号 D2）：完成、答对、金句落定、结尾。
+- 其他类别（转场呼啸、弹出、冲击、蓄力、打字、快门、故障、滑动）首选积木库 shotcraft 里 `fs-` 开头的 16 个 Freesound CC0 文件，用途表在 `scripts/sfx_rules.md` 第 0.1 节；旧 Mixkit 同类音作备选。
 - 规则全文在积木库 `scripts/sfx_rules.md` 第 0 节；新音效只收 CC0（来源与筛选脚本见积木库 `sfx_openverse/`）。
 
 ## 3. SFX 音效库（`scripts/make_sfx_lib.py` 纯 numpy/scipy 合成，48k 立体声，峰值 -14 dBFS → `public/sfx/*.wav` + `manifest.json`）
