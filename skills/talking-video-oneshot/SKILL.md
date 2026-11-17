@@ -9,6 +9,7 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 ## 口播片的默认风格（必读，不用问用户）
 **证据型口播（参考博主A × 博主B 那一路）：主播讲道理，真实素材当证据。** 画面主体是录屏、官网和产品界面、评论和新闻截图、成品片段；自绘卡片只做关键词、数字、步骤，≤20% 时长；宣传片式卡片动效（环绕、3D 展开、飞镜）每片 ≤1 处。素材从哪来、怎么拿、怎么上画面见 `references/material-sourcing.md`，开工前必读；画面选型照 `references/visual-mapping.md`。
+**竖屏（1080×1920）默认用小Lin版式**：上面画面、下面大黑带放字幕，两者之间放「分割线名牌」（金线 + 深色玻璃胶囊里写作者名，常驻全片），规格见 `references/packaging.md` §5.12，积木 `NamePlate`。时长按 1 分钟写，最长 1 分半（video-asset-prep principles §33）。
 用户点名要「宣传片 / 纯动效」时才换成卡片动效路线（`references/promo-and-hosted-pipeline.md`）。
 
 ## 先查备料（开工前 30 秒）
