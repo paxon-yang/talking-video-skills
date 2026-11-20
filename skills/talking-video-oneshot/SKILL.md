@@ -11,6 +11,7 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 **证据型口播（参考博主A × 博主B 那一路）：主播讲道理，真实素材当证据。** 画面主体是录屏、官网和产品界面、评论和新闻截图、成品片段；自绘卡片只做关键词、数字、步骤，≤20% 时长；宣传片式卡片动效（环绕、3D 展开、飞镜）每片 ≤1 处。素材从哪来、怎么拿、怎么上画面见 `references/material-sourcing.md`，开工前必读；画面选型照 `references/visual-mapping.md`。
 **竖屏（1080×1920）默认用小Lin版式**：上面画面、下面大黑带放字幕，两者之间放「分割线名牌」（金线 + 深色玻璃胶囊里写作者名，常驻全片），规格见 `references/packaging.md` §5.12，积木 `NamePlate`。时长按 1 分钟写，最长 1 分半（video-asset-prep principles §33）。
 用户点名要「宣传片 / 纯动效」时才换成卡片动效路线（`references/promo-and-hosted-pipeline.md`）。
+**干货实操片**（教程、「我是怎么做的」、全流程拆解）：画面主体是真操作录屏，数字人只在开头和结尾，章节之间放进度线过渡页、配音暂停。做法和反例见 `references/tutorial-screen-film.md`，开工前必读。
 
 ## 先查备料（开工前 30 秒）
 对照 `../video-asset-prep/SKILL.md` 的备料清单：数字人（出镜版才需要）、声音、积木库、固定框架。**缺哪项就转去备哪项，不要硬做**；纯动效版不需要数字人。备料齐了，下面全部自动推进。
@@ -67,6 +68,6 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 ## 5. 相关
 - 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
-- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、默认风格与素材采集（material-sourcing）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、默认风格与素材采集（material-sourcing）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、干货实操片（tutorial-screen-film）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
 - `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
 - 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`
