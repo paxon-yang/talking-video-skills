@@ -37,7 +37,7 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 | S6 镜头表 | 全部镜头时间从词级对齐表推出（句首 −6 帧为切点），不手填帧号 | Claude | `timeline.ts` 单一事实来源 |
 | S6.5 素材 | 选型单每行填「素材来源」，按 material-sourcing.md 优先级去截图、录屏、取官方图标；云端访问不到的站点经用户 Mac 的 Remote Control 用已登录 Chrome 截 | Claude | `src/` 素材 + 来源登记；真实素材 ≥60% 非主播时长 |
 | S6.6 积木选型 | 镜头表每一行先写「这句的意图」（钩子 / 新词 / 证据 / 数字 / 列举 / 时间推进 / 转场 / 底），再到积木库 `BLOCK_PICKER.md` 按意图查首选 / 备选，填进选型单：意图 → 积木 → 为什么；表里有合适的却要自己画，必须写为什么不用。整片对一遍片型默认组合和每种动效的上限（宣传片式 ≤1、满屏大字 ≤2、punch ≤2 次 / 分） | Claude | 选型单「积木」列无空行；自画镜头都有理由 |
-| S7 动效 | 每句一个镜头、一台相机、一个焦点；所有打字都用打字机动效并登记 `typing.ts`；音效按事件从积木库音效索引 `public/sfx/shotcraft/SFX_INDEX.md` 选（先库、再 Freesound CC0、最后才合成）| Claude | 见 ae-motion-craft |
+| S7 动效 | 每句一个镜头、一台相机、一个焦点；所有打字都用打字机动效并登记 `typing.ts`；音效按 `references/sfx-guide.md` 的「场景 → 音效」对照表选：先写画面事件，再查表用首选，选型单每个音效一行（时间 / 画面事件 / 音效 / 为什么）；表里没有的事件，先库、再 Freesound CC0、最后才合成 | Claude | 见 ae-motion-craft；音效平均 ≤ 1 个 / 2 秒，重音 2–4 次，每个音效都对得上一个画面动作 |
 | S8 渲染 | 分段 + 看门狗：5 分钟无新帧即杀进程重试 ≤3 次；每段起止时间写日志 | Claude | 分段 mp4 → 拼接 → 混音 |
 | S9 自检 | 见第 3 节清单；对着真实文件时间戳和日志核对，不凭印象说「快好了」 | Claude | 自检表 |
 | S10 包装 | 横版 + 竖版封面（主图 + 备选）、缩略图尺寸检查、一句话网感文案 | Claude | 封面 4 张 + 文案 |
@@ -67,6 +67,6 @@ description: 一句话需求 → 口播 / 动效讲解视频成片（含配音�
 
 ## 5. 相关
 - 备料（数字人 / 声音 / 积木 / 固定框架）：`../video-asset-prep/SKILL.md`
-- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、默认风格与素材采集（material-sourcing）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（motion-polish-and-sfx）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
+- 本 skill 的细节在 `references/`：开工单（kickoff-sheet，每支片动手前先填）、稿子与钩子（hooks-and-copy、thinking、templates）、默认风格与素材采集（material-sourcing）、分镜与画面（visual-mapping、motion-and-camera、packaging）、字幕对齐（subtitle-sync）、舒适度规律（comfort-rules）、全流程手册（production-playbook）、口播融合（hosted-video-fusion）、渲染与管线（remotion-pipeline、promo-and-hosted-pipeline）、音效（**sfx-guide：什么时候用哪个音效，选音先看它**；motion-polish-and-sfx：音效管线与合成音）、协作（collaboration）、中英文版（english）、封面素材（gemini-asset-prompts）。
 - `references/legacy-combo-style-SKILL.md` 是拆分前的旧总览，仅供查阅，其中文件路径以现在的目录为准。
 - 脚本：`scripts/`、`../../pipeline-scripts/`；完整方法论：`../../方法论-制作篇.md`

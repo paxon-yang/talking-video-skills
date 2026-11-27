@@ -40,6 +40,10 @@ make_bee_full.py (+make_en_timeline)  →  apply_transitions_bee.py  →  apply_
 - `apply_transitions_bee.py` 的模式：B-roll→host 交替 zoom_through / slide_push；卡片→B-roll 只挑两处（写死 id）给 wipe/flash_cut；断言 `cur.dur ≥ 转场帧数+4` 且 `prev.dur ≥ 转场帧数`；先删旧转场再写（幂等）；保留章节卡自带的 push_blur。换片子时改 `CARD_TO_BROLL` 与镜头类型判断即可。
 - **已知瑕疵**：zoom_through 在窗口边缘有伪影（待修）。
 
+### 3.00 先看用法指南（2026-11-27 用户要求）
+- **选哪个音效以 `sfx-guide.md` 为准**：画面事件 → 首选 / 备选 / 卡在哪一帧 / 用量上限，全部写死在那张表里。用户原话：「skills 是能指导如何使用的，而不是积累一堆，用的时候反而不知道用啥」。
+- 下面 3.0–4 节是旧的管线与合成音说明，和 sfx-guide 冲突时以 sfx-guide 为准。
+
 ### 3.0 找音顺序（2026-11-17 用户硬规则）
 - 用户原话：「以后音频不要自己生成了，先从音频库找，实在没有再自己生成」。
 - 顺序：① 积木库 `public/sfx/shotcraft/SFX_INDEX.md`（165 个，每个有档位 首选/常用/备选、轻重、标签；首选优先）→ ② Openverse 搜 Freesound CC0（积木库 `sfx_openverse/`，下载走仓库 GitHub Actions），入库后跑 `scripts/make_sfx_index.py` → ③ 都没有才用下面第 3 节的合成音，并在选型单写明原因。

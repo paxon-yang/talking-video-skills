@@ -14,6 +14,7 @@
 | `skills/talking-video-oneshot/` | **制作**：一句话需求 → 成片，自动推进；开工先查备料 |
 | `使用说明.md` | **新手先看这个**：安装、用法、常见问题 |
 | `方法论-备料篇.md` / `方法论-制作篇.md` | 两部分的方法论全文 |
+| `skills/talking-video-oneshot/references/sfx-guide.md` | **音效用法指南**：画面里发生什么事件 → 用哪个音效（首选 / 备选 / 卡在哪一帧 / 用量上限），配套 329 个 CC0 音效在 paxonblocks.com「素材 › 音效」免费下载 |
 | `pipeline-scripts/` | 对齐、字幕、字幕同步核对、波形起音核对、抠像、看门狗渲染、音效、打字登记 |
 
 ## 安装
