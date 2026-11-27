@@ -21,7 +21,7 @@
 
 | 画面里发生了什么 | 首选 | 备选 | 卡在哪一帧 | 注意 |
 |---|---|---|---|---|
-| 按钮按下、勾选、选中、列表逐条点亮、标签落位、图标点亮 | `click/mouse-click`（鼠标点击） | `click/mouse-click-up`、`click/mouse-click-down`、`click/button-simple` | 命中那一帧 | 连续多下用 mouse-click / -up / -down 三个轮换，间隔 ≥ 4 帧，音量逐个递减 8% |
+| 按钮按下、勾选、选中、列表逐条点亮、标签落位、图标点亮 | `click/mouse-click`（鼠标点击） | `click/mouse-click-up`、`click/mouse-click-down`、`click/button-simple` | 命中那一帧 | 连续多下用 mouse-click、mouse-click-up、mouse-click-down 三个轮换，间隔 ≥ 4 帧，音量逐个递减 8% |
 | 打开菜单、切换选项、Tab 切换 | `click/menu-tick`（菜单切换） | `click/menu-scroll`、`click/menu-click` | 切换那一帧 | 滚动列表时不要每格都响，只在停住时响一下 |
 | 开关拨开 / 关掉 | `click/mouse-click-up`（鼠标点击（升调）） | `click/tv-switch-off`、`glitch/zap` | 拨动那一帧 | 开用 mouse-click-up，关用 tv-switch-off；「通电亮起」才用 zap |
 | 输入框打字、逐字出标题（短句） | `typing/typewriter-short`（打字机短句） | `typing/digital-typing`、`typing/typewriter-key` | 第一个字出现 | 超过 1.5 秒的长句改用 keyboard-typing 按字数裁短，别从头放到尾 |
@@ -36,7 +36,7 @@
 
 | 画面里发生了什么 | 首选 | 备选 | 卡在哪一帧 | 注意 |
 |---|---|---|---|---|
-| 关键词牌、标签、图标弹出 | `pop/ui-pop-a`（界面弹出 A） | `pop/pop-short-a`、`pop/pop-short-b` | 元素最大那一帧（弹簧顶点） | 同一屏多个依次弹出：pop-short-a / -b 轮换，或直接用 toony-pops 一条 |
+| 关键词牌、标签、图标弹出 | `pop/ui-pop-a`（界面弹出 A） | `pop/pop-short-a`、`pop/pop-short-b` | 元素最大那一帧（弹簧顶点） | 同一屏多个依次弹出：pop-short-a、pop-short-b 轮换，或直接用 toony-pops 一条 |
 | 气泡、药丸、小圆点出现（更软） | `pop/pop-hollow`（空心弹出） | `pop/bubble`、`pop/pop-02` | 出现那一帧 | 比 ui-pop-a 更轻，适合背景里的小元素 |
 | 弹窗、提示框出现 | `pop/popup-notify`（弹窗出现） | `pop/ui-pop-b`、`pop/pop-classic` | 弹窗出现那一帧 | 报错弹窗换成 error-tone |
 | 卡片、截图、窗口飞入 | `whoosh/whoosh-short`（短呼啸） | `whoosh/swoosh-tiny`、`whoosh/swoosh-1` | 提前 2–3 帧开始 | 飞出不用再配，下一个镜头的声音会盖住 |
